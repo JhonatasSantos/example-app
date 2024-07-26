@@ -7,7 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+    <table>
+        <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        </tr>
+    
     <h1>Olá Mundo!</h1>
-    <h2>Meu nome é Jhonatas.</h2>
+    @foreach($objetos as $objeto)
+    <tr>
+       <td>Meu nome é: {{ $objeto['nome']}}</td>
+       <td>E tenho: {{ $objeto['idade'] }}</td>
+       
+    </tr>
+    @endforeach
+    </table>
 </body>
 </html>
